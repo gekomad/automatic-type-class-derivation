@@ -23,6 +23,11 @@ Automatic type class derivation in Scala 2 e Scala 3
 
 ```
 
+```
+    cd scala2
+    sbt test
+```
+
 ## Scala 3
 
 ```scala
@@ -37,4 +42,9 @@ Automatic type class derivation in Scala 2 e Scala 3
     assert(fields == List("a", "c"))
 
     ???
+```
+
+```
+    cd scala3
+    sbt test
 ```
