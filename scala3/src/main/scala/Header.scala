@@ -1,6 +1,6 @@
 package core
 
-object Header{
+object Header:
   import scala.compiletime.{constValue, erasedValue}
   import scala.compiletime.ops.int.S
   import scala.deriving._
@@ -15,4 +15,4 @@ object Header{
 
   inline def fieldNames[P <: scala.Product](using mirror: Mirror.Of[P]): List[String] = toNames[mirror.MirroredElemLabels]
 
-}
+end Header

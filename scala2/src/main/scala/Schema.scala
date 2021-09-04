@@ -35,15 +35,10 @@ object Schema {
 
   }
 
-  implicit def instantiateClass[A, R <: HList](
-    implicit repr: LabelledGeneric.Aux[A, R],
-    schema: Schema[R]
-  ): Schema[A] = {
-    val o = Schema.instance { theMap =>
+  implicit def instantiateClass[A, R <: HList](implicit repr: LabelledGeneric.Aux[A, R], schema: Schema[R]): Schema[A] =
+    Schema.instance { theMap =>
       val x: Either[String, R] = schema.readFrom(theMap)
-      val z: Either[String, A] = x.map(x => repr.from(x))
+      val z: Either[String, A] = x.map(c => repr.from(c))
       z
     }
-    o
-  }
 }

@@ -12,6 +12,9 @@ Automatic type class derivation in Scala 2 e Scala 3
     case class Foo(a: Int, c: String)
 
     val fields: List[String] = fieldNames[Foo]
+
+    assert(fields == List("a", "c"))
+
     val list: List[String]   = List("1", "foo")
 
     val p: Map[String, String] = fields.zip(list).toMap // Map(a -> 1, c -> foo)
@@ -28,6 +31,7 @@ Automatic type class derivation in Scala 2 e Scala 3
     import core.Header._
 
     case class Foo(a: Int, c: String)
+
     val fields: List[String] = fieldNames[Foo]
 
     assert(fields == List("a", "c"))

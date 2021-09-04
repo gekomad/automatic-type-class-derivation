@@ -1,10 +1,9 @@
 package core
 
-trait Convert[V] {
+trait Convert[V]:
   def parse(input: String): Either[String, V]
-}
 
-object Convert {
+object Convert:
 
   def to[V](input: String)(implicit C: Convert[V]): Either[String, V] = C.parse(input)
 
@@ -27,6 +26,5 @@ object Convert {
   //implicit val _to...
   //implicit val _to...
 
-}
 
-// scala3 -- same code
+end Convert
