@@ -4,4 +4,4 @@ version := "0.1"
 
 scalaVersion := "3.0.2"
 
-libraryDependencies += "org.typelevel" %% "discipline-scalatest" % "2.1.5" % Test
+libraryDependencies += "com.novocode" % "junit-interface" % "0.11" % "test"
