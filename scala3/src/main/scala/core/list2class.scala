@@ -15,9 +15,7 @@ object list2class:
       a.toDoubleOption.toRight(s"$a value is not valid Double")
     given Decoder[List[String], EmptyTuple] = {
       case Nil => Right(EmptyTuple)
-      case s =>
-        println(s)
-        Left(s"$s empty list")
+      case s   => Left(s"$s empty list")
     }
 
     given [H, T <: Tuple](using
