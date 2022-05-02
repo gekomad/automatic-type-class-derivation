@@ -2,7 +2,7 @@ name := "derivation-scala2"
 
 version := "0.1"
 
-scalaVersion := "2.13.6"
+scalaVersion := "2.13.8"
 
 //shapeless
 libraryDependencies += "com.chuusai" %% "shapeless" % "2.3.3"

@@ -1,4 +1,4 @@
-Automatic type class derivation in Scala 2 e Scala 3
+Automatic type class derivation in Scala 2 and Scala 3
 ======
 
 
